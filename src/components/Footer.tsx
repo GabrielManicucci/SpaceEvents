@@ -4,7 +4,7 @@ import { TbBrandTiktok } from "react-icons/tb";
 
 export default function Footer() {
   return (
-    <div className="flex items-center justify-between p-5 bg-primaryBlue text-white rounded-md mb-2">
+    <div className="flex items-center justify-between p-8 bg-primaryBlue text-white rounded-md mb-2 mt-16">
       <div>
         <h1 className="text-lg mb-4">EventsSpace</h1>
         <p className="font-light text-sm text-slate-200">

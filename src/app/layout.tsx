@@ -22,11 +22,11 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={poppins.className}>
-        <div className="w-11/12">
+        <div className="w-[92%] fixed">
           <Navbar />
         </div>
-        <div className="w-11/12">{children}</div>
-        <div className="w-11/12">
+        <div className="w-[93%]">{children}</div>
+        <div className="w-[93%]">
           <Footer />
         </div>
       </body>

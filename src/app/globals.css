@@ -2,11 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+html, body {
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(90deg, rgba(219,214,255,1) 0%, rgba(180,255,212,1) 25%, rgba(241,255,241,1) 61%, rgba(235,244,255,1) 99%);
+  overflow-x: hidden;
+  background: linear-gradient(
+    90deg,
+    rgb(228, 231, 255) 5%,
+    rgb(223, 253, 235) 30%,
+    rgb(255, 246, 246) 61%,
+    rgb(226, 234, 255) 99%
+  );
 }

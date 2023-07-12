@@ -14,7 +14,9 @@ module.exports = {
       },
       colors: {
         primaryBlue: '#3423A6',
-        secondaryBlue: '#5762D5'
+        secondaryBlue: '#5762D5',
+        hoverBlue: '#0039CA',
+        hoverGreen: '#1EEA51',
       }
     },
   },

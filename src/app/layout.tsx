@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -25,9 +25,7 @@ export default function RootLayout({
         <div className="w-11/12">
           <Navbar />
         </div>
-
         <div className="w-11/12">{children}</div>
-
         <div className="w-11/12">
           <Footer />
         </div>

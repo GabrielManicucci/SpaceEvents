@@ -2,12 +2,9 @@ import { ReactNode } from "react";
 
 interface Props {
   children: ReactNode;
+  style?: string;
 }
 
-export default function Section({ children }: Props) {
-  return (
-    <div className="flex items-center flex-col justify-center p-2 mt-7">
-      {children}
-    </div>
-  );
+export default function Section({ children, style }: Props) {
+  return <div className={style}>{children}</div>;
 }

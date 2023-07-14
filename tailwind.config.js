@@ -18,6 +18,7 @@ module.exports = {
         hoverBlue: '#0039CA',
         hoverGreen: '#1EEA51',
         backgroundCard: '#F9FAFF',
+        gradientColorBlue: '#0000ff',
       }
     },
   },

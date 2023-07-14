@@ -6,7 +6,7 @@ interface Props {
 
 export default function Card({ children }: Props) {
   return (
-    <div className="flex flex-col p-9 mb-5 shadow-xl rounded-xl text-left">
+    <div className="flex flex-col mb-14 shadow-xl rounded-xl text-left md:flex-row">
       {children}
     </div>
   );

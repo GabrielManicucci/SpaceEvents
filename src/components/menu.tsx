@@ -8,6 +8,7 @@ const Menu = ({ value }: Props) => {
       <p className="hover:shadow-lg px-3 py-2 cursor-pointer">Home</p>
       <p className=" hover:shadow-lg px-3 py-2 cursor-pointer">About</p>
       <p className=" hover:shadow-lg px-3 py-2 cursor-pointer">Contact</p>
+      <p className=" hover:shadow-lg px-3 py-2 cursor-pointer">Space</p>
     </div>
   );
 };

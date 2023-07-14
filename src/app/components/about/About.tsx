@@ -8,7 +8,7 @@ export default function About() {
     <Section style={"flex items-center flex-col justify-center p-2 mt-20"}>
       <Card>
         <Image
-          src={"/WorkingPeoples.png"}
+          src={"/workingPeoples.png"}
           width={700}
           height={0}
           alt="imagem pessoas trabalhando"

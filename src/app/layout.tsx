@@ -10,8 +10,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Gaston Eventos",
-  description: "Um espaço para vocÊ ser feliz",
+  title: "SpaceEvents",
+  description: "Um espaço para você ser feliz",
 };
 
 export default function RootLayout({

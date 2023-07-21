@@ -36,12 +36,12 @@ export default function HeadLine() {
       </div>
 
       <div className="flex flex-col mt-3 w-full md:flex-row md:mt-0">
-        <button className="flex justify-between w-full p-7 mb-2 rounded-lg bg-blue-950 hover:bg-gradient-to-r from-indigo-950 to-gradientColorBlue text-slate-50 transition-colors md:text-left md:mr-2 md:py-8 md:mb-0 md:flex-col lg:px-12 lg:py-9 lg:font-medium lg:text-xl xl:text-2xl">
+        <button className="flex justify-between w-full p-7 mb-2 rounded-lg bg-blue-950 hover:bg-gradient-to-r from-indigo-950 to-gradientColorBlue text-slate-50 transition hover:scale-95 duration-200 md:text-left md:mr-2 md:py-8 md:mb-0 md:flex-col lg:px-12 lg:py-9 lg:font-medium lg:text-xl xl:text-2xl">
           Conheça nosso espaço
           {/* <HiOutlineArrowRight size={24} /> */}
           <BsArrowRight size={28} />
         </button>
-        <button className="flex justify-between w-full p-7 rounded-lg bg-green-700 text-slate-50 hover:bg-gradient-to-r from-green-700 to-hoverGreen transition-colors md:p-7 md:text-left md:mb-0 md:flex-col lg:px-12 lg:py-9 lg:font-medium lg:text-xl xl:text-2xl">
+        <button className="flex justify-between w-full p-7 rounded-lg bg-green-700 text-slate-50 hover:bg-gradient-to-r from-green-700 to-hoverGreen hover:scale-95 duration-200 md:p-7 md:text-left md:mb-0 md:flex-col lg:px-12 lg:py-9 lg:font-medium lg:text-xl xl:text-2xl">
           Agende uma visita
           <BsArrowRight size={28} />
         </button>

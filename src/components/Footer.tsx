@@ -5,7 +5,7 @@ import Doubts from "./Doubts";
 
 export default function Footer() {
   return (
-    <div className="flex flex-col items-center justify-between p-8 bg-gradient-to-r from-indigo-950 to-gradientColorBlue text-white rounded-md mb-2 mt-24">
+    <div className="flex flex-col items-center justify-between px-5 py-8 bg-gradient-to-r from-indigo-950 to-gradientColorBlue text-white rounded-md mb-2 mt-24">
       <Doubts />
       <div className="w-full flex justify-between mt-24">
         <div>
@@ -20,9 +20,9 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col justify-between">
-          <RxInstagramLogo size={28} />
-          <AiOutlineFacebook size={28} className="my-4" />
-          <TbBrandTiktok size={28} />
+          <RxInstagramLogo size={28} className="cursor-pointer" />
+          <AiOutlineFacebook size={28} className="my-4 cursor-pointer" />
+          <TbBrandTiktok size={28} className="cursor-pointer" />
         </div>
       </div>
     </div>

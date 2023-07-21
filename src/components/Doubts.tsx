@@ -8,7 +8,7 @@ export default function Doubts() {
     {
       id: Math.random() * 10,
       key: Math.random() * 10,
-      title: "Lorem ipsum dolor sit amet, consectet",
+      title: "Lorem ipsum dolor sit amet, consectet ?",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam odit aspernatur, error sapiente sed culpa quis itaque maiores ut necessitatibus.",
       status: true,
@@ -16,7 +16,7 @@ export default function Doubts() {
     {
       id: Math.random() * 10,
       key: Math.random() * 10,
-      title: "Lorem ipsum dolor sit amet, consectet",
+      title: "Lorem ipsum dolor sit amet, consectet ?",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam odit aspernatur, error sapiente sed culpa quis itaque maiores ut necessitatibus.",
       status: false,
@@ -24,7 +24,7 @@ export default function Doubts() {
     {
       id: Math.random() * 10,
       key: Math.random() * 10,
-      title: "Lorem ipsum dolor sit amet, consectet",
+      title: "Lorem ipsum dolor sit amet, consectet ?",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam odit aspernatur, error sapiente sed culpa quis itaque maiores ut necessitatibus.",
       status: false,
@@ -32,7 +32,7 @@ export default function Doubts() {
     {
       id: Math.random() * 10,
       key: Math.random() * 10,
-      title: "Lorem ipsum dolor sit amet, consectet",
+      title: "Lorem ipsum dolor sit amet, consectet ?",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam odit aspernatur, error sapiente sed culpa quis itaque maiores ut necessitatibus.",
       status: false,
@@ -40,7 +40,15 @@ export default function Doubts() {
     {
       id: Math.random() * 10,
       key: Math.random() * 10,
-      title: "Lorem ipsum dolor sit amet, consectet",
+      title: "Lorem ipsum dolor sit amet, consectet ?",
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam odit aspernatur, error sapiente sed culpa quis itaque maiores ut necessitatibus.",
+      status: false,
+    },
+    {
+      id: Math.random() * 10,
+      key: Math.random() * 10,
+      title: "Lorem ipsum dolor sit amet, consectet ?",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam odit aspernatur, error sapiente sed culpa quis itaque maiores ut necessitatibus.",
       status: false,

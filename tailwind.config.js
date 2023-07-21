@@ -19,7 +19,26 @@ module.exports = {
         hoverGreen: '#1EEA51',
         backgroundCard: '#F9FAFF',
         gradientColorBlue: '#0000ff',
-      }
+      },
+      keyframes: {
+        openDropdown: {
+          '0%': { height: '0', opacity: '0' },
+          '100%': { height: '264px', opacity: '1' },
+        },
+        closeDropdown: {
+          '0%': { height: '224px', opacity: '1' },
+          '100%': { height: '0', opacity: '0' },
+        },
+        doubtsDropdown: {
+          '0%': { height: '0', },
+          '100%': { height: '80px', },
+        },
+      },
+      animation: {
+        menuOpenDropdown: 'openDropdown 1s',
+        menuCloseDropdown: 'closeDropdown 1s',
+        doubtsDropdown: 'doubtsDropdown 0.8s',
+      },
     },
   },
   plugins: [],

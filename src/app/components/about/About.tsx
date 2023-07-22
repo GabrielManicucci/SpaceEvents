@@ -5,24 +5,27 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <Section style={"flex items-center flex-col justify-center p-2 mt-20"}>
+    <Section
+      style={"flex items-center flex-col justify-center p-2 mt-20 w-full"}
+    >
       <Card>
         <Image
-          src={"/workingPeoples.png"}
+          src={"/workingPeoples2.png"}
           width={700}
           height={0}
           alt="imagem pessoas trabalhando"
-          className="rounded-t-xl"
+          className="rounded-t-xl md:w-[45%] bg-contain"
         />
-        <div className="p-9">
-          <h2 className="text-xl font-semibold text-indigo-950 my-3">
+        <div className="flex flex-col justify-center p-9 md:w-[55%]">
+          <h2 className="text-2xl font-semibold text-indigo-950 my-3">
             About we
           </h2>
           <p className="my-4">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam
             error fuga pariatur ut? Impedit consectetur laudantium, eligendi
             deserunt, tempore ad beatae qui rem excepturi facilis veniam eum
-            consequuntur iusto libero!
+            consequuntur iusto libero, tempore ad beatae qui rem excepturi
+            facilis veniam eum consequuntur iusto libero!
           </p>
 
           <Button
@@ -37,19 +40,20 @@ export default function About() {
 
       <Card>
         <Image
-          src={"/SpaceEventsImage2.png"}
+          src={"/SpaceEventsImage3.png"}
           width={700}
           height={0}
           alt="imagem pessoas trabalhando"
-          className="rounded-t-xl"
+          className="rounded-t-xl md:min-h-full md:w-[45%] bg-cover bg-no-repeat bg-center relative"
         />
-        <div className="p-9">
-          <h2 className="text-xl font-semibold text-indigo-950 my-3">Space</h2>
+        <div className="flex flex-col justify-center p-9 md:w-[55%]">
+          <h2 className="text-2xl font-semibold text-indigo-950 my-3">Space</h2>
           <p className="my-4">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam
             error fuga pariatur ut? Impedit consectetur laudantium, eligendi
             deserunt, tempore ad beatae qui rem excepturi facilis veniam eum
-            consequuntur iusto libero!
+            consequuntur iusto libero, tempore ad beatae qui rem excepturi
+            facilis veniam eum consequuntur iusto libero!
           </p>
 
           <Button
@@ -68,17 +72,18 @@ export default function About() {
           width={700}
           height={0}
           alt="imagem pessoas trabalhando"
-          className="rounded-t-xl"
+          className="rounded-t-xl md:w-[45%]"
         />
-        <div className="p-9">
-          <h2 className="text-xl font-semibold text-indigo-950 my-3">
+        <div className="flex flex-col justify-center p-9 md:w-[55%]">
+          <h2 className="text-2xl font-semibold text-indigo-950 my-3">
             Location
           </h2>
           <p className="my-4">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam
             error fuga pariatur ut? Impedit consectetur laudantium, eligendi
             deserunt, tempore ad beatae qui rem excepturi facilis veniam eum
-            consequuntur iusto libero!
+            consequuntur iusto libero, tempore ad beatae qui rem excepturi
+            facilis veniam eum consequuntur iusto libero!
           </p>
 
           <Button

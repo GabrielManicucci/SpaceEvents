@@ -22,22 +22,27 @@ module.exports = {
       },
       keyframes: {
         openDropdown: {
-          '0%': { height: '0', opacity: '0' },
-          '100%': { height: '264px', opacity: '1' },
+          '0%': { height: '0', },
+          '100%': { height: '284px', },
         },
         closeDropdown: {
-          '0%': { height: '224px', opacity: '1' },
-          '100%': { height: '0', opacity: '0' },
+          '0%': { width: '', height: '284px', opacity: '1' },
+          '100%': { width: '', height: '0', opacity: '0' },
         },
         doubtsDropdown: {
           '0%': { height: '0', },
           '100%': { height: '80px', },
         },
+        opacityEffect: { 
+          '0%': { opacity: '0', } ,
+          '100%': { opacity: '1', },
+        },
       },
       animation: {
-        menuOpenDropdown: 'openDropdown 1s',
+        menuOpenDropdown: 'openDropdown 0.8s',
         menuCloseDropdown: 'closeDropdown 1s',
         doubtsDropdown: 'doubtsDropdown 0.8s',
+        opacityEffect: 'opacityEffect 3s'
       },
     },
   },

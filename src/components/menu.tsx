@@ -1,3 +1,5 @@
+import { BsArrowRight } from "react-icons/bs";
+
 interface Props {
   openDropdown: boolean;
   closeDropdown: boolean;
@@ -7,12 +9,12 @@ const Menu = ({ openDropdown, closeDropdown }: Props) => {
   function menuOpenOrClosed() {
     if (openDropdown) {
       console.log(openDropdown, closeDropdown);
-      return "animate-menuOpenDropdown relative flex flex-col text-left w-full h-[264px] mt-3";
+      return "animate-menuOpenDropdown relative flex flex-col text-left w-full h-[284px] mt-4 lg:flex lg:flex-row lg:w-[64%] lg:h-full lg:mt-0 justify-between";
     } else if (closeDropdown) {
       console.log(openDropdown, closeDropdown);
-      return "animate-menuCloseDropdown relative flex flex-col text-left w-full h-0 mt-0";
+      return "animate-menuCloseDropdown relative flex flex-col text-left w-full h-0 mt-0 lg:flex lg:flex-row lg:w-[64%] lg:h-full justify-between";
     } else {
-      return "hidden";
+      return "hidden lg:flex flex-row lg:w-[64%] justify-between";
     }
   }
 
@@ -20,42 +22,55 @@ const Menu = ({ openDropdown, closeDropdown }: Props) => {
 
   return (
     <div className={menuOpenOrClosed()}>
-      <p
+      <div className="lg:flex">
+        <a
+          className={
+            closeDropdown
+              ? "hidden lg:flex items-center border hover:shadow-md px-7 py-3 mt-2 cursor-pointer rounded-lg hover:bg-gray-100 transition-all text-sm animate-opacityEffect lg:mt-0 lg:px-3 lg:border-none"
+              : "flex items-center border hover:shadow-md px-7 py-3 mt-2 cursor-pointer rounded-lg hover:bg-gray-100 transition-all text-sm animate-opacityEffect lg:mt-0 lg:border-none lg:px-6"
+          }
+        >
+          Home
+        </a>
+        <a
+          className={
+            closeDropdown
+              ? "hidden lg:flex items-center border hover:shadow-md px-7 py-3 mt-2 cursor-pointer rounded-lg hover:bg-gray-100 transition-all text-sm animate-opacityEffect lg:mt-0 lg:px-3 lg:border-none"
+              : "flex items-center border hover:shadow-md px-7 py-3 mt-2 cursor-pointer rounded-lg hover:bg-gray-100 transition-all text-sm animate-opacityEffect lg:mt-0 lg:border-none lg:px-6"
+          }
+        >
+          About
+        </a>
+        <a
+          className={
+            closeDropdown
+              ? "hidden lg:flex items-center border hover:shadow-md px-7 py-4 mt-2 cursor-pointer rounded-lg hover:bg-gray-100 transition-all text-sm animate-opacityEffect lg:mt-0 lg:px-3 lg:border-none"
+              : "flex items-center border hover:shadow-md px-7 py-3 mt-2 cursor-pointer rounded-lg hover:bg-gray-100 transition-all text-sm animate-opacityEffect lg:mt-0 lg:border-none lg:px-6"
+          }
+        >
+          Contact
+        </a>
+        <a
+          className={
+            closeDropdown
+              ? "hidden lg:flex items-center border hover:shadow-md px-7 py-4 mt-2 cursor-pointer rounded-lg hover:bg-gray-100 transition-all text-sm animate-opacityEffect lg:mt-0 lg:px-3 lg:border-none"
+              : "flex items-center border hover:shadow-md px-7 py-3 mt-2 cursor-pointer rounded-lg hover:bg-gray-100 transition-all text-sm animate-opacityEffect lg:mt-0 lg:border-none lg:px-6"
+          }
+        >
+          Space
+        </a>
+      </div>
+
+      <a
         className={
           closeDropdown
-            ? "hidden"
-            : "border hover:shadow-md px-5 py-4 mt-2 cursor-pointer rounded-lg hover:bg-gray-100 transition-all"
+            ? "hidden lg:flex justify-between items-center bg-green-700 px-7 py-4 mt-2 cursor-pointer rounded-lg hover:bg-gradient-to-r from-green-700 to-hoverGreen hover:scale-95 hover:border-none text-slate-50 transition-all duration-200 text-sm font-medium animate-opacityEffect lg:mt-0 lg:w-60"
+            : "flex justify-between items-center bg-green-700 px-7 py-4 mt-2 cursor-pointer rounded-lg hover:bg-gradient-to-r from-green-700 to-hoverGreen hover:scale-95 hover:border-none text-slate-50 transition-all duration-200 text-sm font-medium animate-opacityEffect lg:mt-0 lg:w-60"
         }
       >
-        Home
-      </p>
-      <p
-        className={
-          closeDropdown
-            ? "hidden"
-            : "border hover:shadow-md px-5 py-4 mt-2 cursor-pointer rounded-lg hover:bg-gray-100 transition-all"
-        }
-      >
-        About
-      </p>
-      <p
-        className={
-          closeDropdown
-            ? "hidden"
-            : "border hover:shadow-md px-5 py-4 mt-2 cursor-pointer rounded-lg hover:bg-gray-100 transition-all"
-        }
-      >
-        Contact
-      </p>
-      <p
-        className={
-          closeDropdown
-            ? "hidden"
-            : "border hover:shadow-md px-5 py-4 mt-2 cursor-pointer rounded-lg hover:bg-gray-100 transition-all"
-        }
-      >
-        Space
-      </p>
+        Agende uma visita
+        <BsArrowRight size={28} />
+      </a>
     </div>
   );
 };

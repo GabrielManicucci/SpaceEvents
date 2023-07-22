@@ -10,11 +10,11 @@ export default function Navbar() {
   const [closeDropdown, setCloseDropdown] = useState(false);
 
   return (
-    <div className="absolute flex flex-col items-center justify-between px-5 py-8 bac bg-white mt-2 rounded-md w-full transition-transform">
-      <div className="flex flex-row items-center justify-between w-full">
+    <div className="absolute flex flex-col items-center justify-between px-5 py-7 bac bg-white mt-2 rounded-md w-full transition-transform lg:flex-row">
+      <div className="flex flex-row items-center justify-between w-full lg:w-[36%]">
         <h1 className="text-xl font-semibold text-green-700">EventsSpace</h1>
 
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <RxHamburgerMenu
             onClick={() => {
               if (!openDropdown) {

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 
 interface Props {
@@ -23,7 +24,8 @@ const Menu = ({ openDropdown, closeDropdown }: Props) => {
   return (
     <div className={menuOpenOrClosed()}>
       <div className="lg:flex">
-        <a
+        <Link
+          href={'/'}
           className={
             closeDropdown
               ? "hidden lg:flex items-center border hover:shadow-md px-7 py-3 mt-2 cursor-pointer rounded-lg hover:bg-gray-100 transition-all text-sm animate-opacityEffect lg:mt-0 lg:px-3 lg:border-none"
@@ -31,8 +33,9 @@ const Menu = ({ openDropdown, closeDropdown }: Props) => {
           }
         >
           Home
-        </a>
-        <a
+        </Link>
+        <Link
+          href={'/components/about'}
           className={
             closeDropdown
               ? "hidden lg:flex items-center border hover:shadow-md px-7 py-3 mt-2 cursor-pointer rounded-lg hover:bg-gray-100 transition-all text-sm animate-opacityEffect lg:mt-0 lg:px-3 lg:border-none"
@@ -40,8 +43,9 @@ const Menu = ({ openDropdown, closeDropdown }: Props) => {
           }
         >
           About
-        </a>
-        <a
+        </Link>
+        <Link
+          href={'/components/contact'}
           className={
             closeDropdown
               ? "hidden lg:flex items-center border hover:shadow-md px-7 py-4 mt-2 cursor-pointer rounded-lg hover:bg-gray-100 transition-all text-sm animate-opacityEffect lg:mt-0 lg:px-3 lg:border-none"
@@ -49,16 +53,18 @@ const Menu = ({ openDropdown, closeDropdown }: Props) => {
           }
         >
           Contact
-        </a>
-        <a
+        </Link>
+        <Link
+          href={'/components/space'}
           className={
             closeDropdown
               ? "hidden lg:flex items-center border hover:shadow-md px-7 py-4 mt-2 cursor-pointer rounded-lg hover:bg-gray-100 transition-all text-sm animate-opacityEffect lg:mt-0 lg:px-3 lg:border-none"
               : "flex items-center border hover:shadow-md px-7 py-3 mt-2 cursor-pointer rounded-lg hover:bg-gray-100 transition-all text-sm animate-opacityEffect lg:mt-0 lg:border-none lg:px-6"
           }
         >
+          {/* <Link href={"/space"}>Space</Link> */}
           Space
-        </a>
+        </Link>
       </div>
 
       <a

@@ -13,7 +13,7 @@ export default function HeadLine() {
         "flex flex-col justify-center p-2 mt-10 md:grid grid-cols-2 gap-9 xl:gap-x-20 xl:gap-y-0 lg:mt-20"
       }
     >
-      <div className="flex flex-col text-left">
+      <div className="flex flex-col text-left text-indigo-950">
         <h4>Boas vindas a SpaceEvents</h4>
         <h1 className="text-4xl font-semibold text-indigo-950 mt-2 mb-5 xl:text-5xl">
           Um lugar preparado exatamente para levar você à felicidade

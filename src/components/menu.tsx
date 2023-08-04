@@ -70,8 +70,8 @@ const Menu = ({ openDropdown, closeDropdown }: Props) => {
       <a
         className={
           closeDropdown
-            ? "hidden lg:flex justify-between items-center bg-green-700 px-7 py-4 mt-2 cursor-pointer rounded-lg hover:bg-gradient-to-r from-green-700 to-hoverGreen hover:scale-95 hover:border-none text-slate-50 transition-all duration-200 text-sm font-medium animate-opacityEffect lg:mt-0 lg:w-60"
-            : "flex justify-between items-center bg-green-700 px-7 py-4 mt-2 cursor-pointer rounded-lg hover:bg-gradient-to-r from-green-700 to-hoverGreen hover:scale-95 hover:border-none text-slate-50 transition-all duration-200 text-sm font-medium animate-opacityEffect lg:mt-0 lg:w-60"
+            ? "hidden lg:flex justify-between items-center bg-green-700 px-7 py-4 mt-2 ml-7 cursor-pointer rounded-lg hover:bg-gradient-to-r from-green-700 to-hoverGreen hover:scale-95 hover:border-none text-slate-50 transition-all duration-200 text-sm font-medium animate-opacityEffect lg:mt-0 lg:w-60"
+            : "flex justify-between items-center bg-green-700 px-7 py-4 mt-2 ml-7 cursor-pointer rounded-lg hover:bg-gradient-to-r from-green-700 to-hoverGreen hover:scale-95 hover:border-none text-slate-50 transition-all duration-200 text-sm font-medium animate-opacityEffect lg:mt-0 lg:w-60"
         }
       >
         Agende uma visita

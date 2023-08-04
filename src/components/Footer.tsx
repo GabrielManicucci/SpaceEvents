@@ -5,7 +5,7 @@ import Doubts from "./Doubts";
 
 export default function Footer() {
   return (
-    <div className="flex flex-col items-center justify-between px-5 py-8 bg-gradient-to-r from-indigo-950 to-gradientColorBlue text-white rounded-md mb-2 mt-24">
+    <div className="flex flex-col items-center justify-between px-5 py-8 bg-gradient-to-r from-indigo-950 to-gradientColorBlue text-white rounded-md mb-2 mt-32">
       <Doubts />
       <div className="w-full flex justify-between mt-24">
         <div>

@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Space() {
 	return (
-  <main className="flex flex-col justify-center w-full mt-32">
+  <main className="flex flex-col justify-center w-full mt-32 mb-10">
 			<Section
 				style={'flex flex-col justify-center p-2 mt-10 xl:gap-x-20 lg:mt-20'}
 			>

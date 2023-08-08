@@ -9,6 +9,13 @@ export default function Navbar() {
   const [openDropdown, setOpenDropdown] = useState(false);
   const [closeDropdown, setCloseDropdown] = useState(false);
 
+  const closeMenu = () => {
+    if (openDropdown) {
+      setCloseDropdown(true);
+      setOpenDropdown(false);
+    }
+  }
+
   return (
     <div className="absolute flex flex-col items-center justify-between px-5 py-7 bac bg-white mt-2 rounded-md w-full transition-transform lg:flex-row">
       <div className="flex flex-row items-center justify-between w-full lg:w-[36%]">
@@ -28,7 +35,7 @@ export default function Navbar() {
 
           <AiOutlineClose
             onClick={() => {
-              if (!closeDropdown) {
+              if (openDropdown) {
                 setCloseDropdown(true);
                 setOpenDropdown(false);
               }
@@ -39,7 +46,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      <Menu openDropdown={openDropdown} closeDropdown={closeDropdown} />
+      <Menu openDropdown={openDropdown} closeDropdown={closeDropdown} closeMenu={closeMenu} />
     </div>
   );
 }

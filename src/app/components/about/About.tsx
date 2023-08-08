@@ -14,7 +14,7 @@ export default function About() {
           width={700}
           height={0}
           alt="imagem pessoas trabalhando"
-          className="rounded-t-xl md:w-[45%] bg-contain"
+          className="rounded-t-xl md:w-[45%] bg-cover bg-no-repeat bg-center"
         />
         <div className="flex flex-col justify-center p-9 md:w-[55%]">
           <h2 className="text-2xl font-semibold text-indigo-950 my-3">
@@ -43,8 +43,8 @@ export default function About() {
           src={"/SpaceEventsImage3.png"}
           width={700}
           height={0}
-          alt="imagem pessoas trabalhando"
-          className="rounded-t-xl md:min-h-full md:w-[45%] bg-cover bg-no-repeat bg-center relative"
+          alt="Imagem da área de lazer do SpaceEvents"
+          className="rounded-t-xl md:w-[45%] bg-cover bg-no-repeat bg-center"
         />
         <div className="flex flex-col justify-center p-9 md:w-[55%]">
           <h2 className="text-2xl font-semibold text-indigo-950 my-3">Space</h2>
@@ -72,7 +72,7 @@ export default function About() {
           width={700}
           height={0}
           alt="imagem pessoas trabalhando"
-          className="rounded-t-xl md:w-[45%]"
+          className="rounded-t-xl md:w-[45%] bg-cover bg-no-repeat bg-center"
         />
         <div className="flex flex-col justify-center p-9 md:w-[55%]">
           <h2 className="text-2xl font-semibold text-indigo-950 my-3">

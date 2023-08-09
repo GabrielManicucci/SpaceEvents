@@ -72,7 +72,8 @@ const Menu = ({ openDropdown, closeDropdown, closeMenu }: Props) => {
 				</Link>
 			</div>
 
-			<a
+			<Link
+        href={'/components/contact'}
 				className={
 					closeDropdown
 						? 'hidden lg:flex justify-between items-center bg-green-700 px-7 py-4 mt-2 cursor-pointer rounded-lg hover:bg-gradient-to-r from-green-700 to-hoverGreen hover:scale-95 hover:border-none text-slate-50 transition-all duration-200 text-sm font-medium animate-opacityEffect lg:mt-0 lg:w-60 lg:ml-7'
@@ -82,7 +83,7 @@ const Menu = ({ openDropdown, closeDropdown, closeMenu }: Props) => {
 			>
 				Agende uma visita
 				<BsArrowRight size={28} />
-			</a>
+			</Link>
 		</div>
 	);
 };

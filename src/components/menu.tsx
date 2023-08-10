@@ -34,7 +34,7 @@ const Menu = ({ openDropdown, closeDropdown, closeMenu }: Props) => {
 					}
 					onClick={() => closeMenu()}
 				>
-					Home
+					Início
 				</Link>
 				<Link
 					href={'/components/about'}
@@ -45,7 +45,7 @@ const Menu = ({ openDropdown, closeDropdown, closeMenu }: Props) => {
 					}
 					onClick={() => closeMenu()}
 				>
-					About
+					Sobre
 				</Link>
 				<Link
 					href={'/components/contact'}
@@ -56,7 +56,7 @@ const Menu = ({ openDropdown, closeDropdown, closeMenu }: Props) => {
 					}
 					onClick={() => closeMenu()}
 				>
-					Contact
+					Contate-nos
 				</Link>
 				<Link
 					href={'/components/space'}
@@ -68,7 +68,7 @@ const Menu = ({ openDropdown, closeDropdown, closeMenu }: Props) => {
 					onClick={() => closeMenu()}
 				>
 					{/* <Link href={"/space"}>Space</Link> */}
-					Space
+					Espaço
 				</Link>
 			</div>
 

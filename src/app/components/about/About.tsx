@@ -18,7 +18,7 @@ export default function About() {
         />
         <div className="flex flex-col justify-center p-9 md:w-[55%]">
           <h2 className="text-2xl font-semibold text-indigo-950 my-3">
-            About we
+            Sobre nós
           </h2>
           <p className="my-4">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam
@@ -47,7 +47,7 @@ export default function About() {
           className="rounded-t-xl md:w-[45%] bg-cover bg-no-repeat bg-center"
         />
         <div className="flex flex-col justify-center p-9 md:w-[55%]">
-          <h2 className="text-2xl font-semibold text-indigo-950 my-3">Space</h2>
+          <h2 className="text-2xl font-semibold text-indigo-950 my-3">Espaço</h2>
           <p className="my-4">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam
             error fuga pariatur ut? Impedit consectetur laudantium, eligendi
@@ -76,7 +76,7 @@ export default function About() {
         />
         <div className="flex flex-col justify-center p-9 md:w-[55%]">
           <h2 className="text-2xl font-semibold text-indigo-950 my-3">
-            Location
+            Localização
           </h2>
           <p className="my-4">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam

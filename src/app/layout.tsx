@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-br">
+    <html lang="en">
       <body className={poppins.className}>
         <div className="w-[95%] fixed xl:max-w-screen-2xl">
           <Navbar />

@@ -8,7 +8,7 @@ export default function Space() {
 				style={'flex flex-col justify-center p-2 mt-10 xl:gap-x-20 lg:mt-20'}
 			>
 				<div className="flex flex-col items-center mb-24">
-					<h1 className="text-center text-3xl font-semibold mb-1 text-indigo-950">About Us</h1>
+					<h1 className="text-center text-3xl font-semibold mb-1 text-indigo-950">Sobre Nós</h1>
 					<div className="w-full md:w-4/5 border border-indigo-950"></div>
 				</div>
 

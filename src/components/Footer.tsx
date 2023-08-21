@@ -1,20 +1,20 @@
-import { RxInstagramLogo } from "react-icons/rx";
-import { AiOutlineFacebook } from "react-icons/ai";
-import { TbBrandTiktok } from "react-icons/tb";
-import Doubts from "./Doubts";
+import { AiOutlineFacebook } from 'react-icons/ai'
+import { RxInstagramLogo } from 'react-icons/rx'
+import { TbBrandTiktok } from 'react-icons/tb'
+import Doubts from './Doubts'
 
 export default function Footer() {
   return (
-    <div className="flex flex-col items-center justify-between px-5 py-8 bg-gradient-to-r from-indigo-950 to-gradientColorBlue text-white rounded-md mb-2 mt-32">
+    <div className="mb-2 mt-32 flex flex-col items-center justify-between rounded-md bg-gradient-to-r from-indigo-950 to-gradientColorBlue px-5 py-8 text-white">
       <Doubts />
-      <div className="w-full flex justify-between mt-24">
+      <div className="mt-24 flex w-full justify-between">
         <div>
-          <h1 className="text-lg mb-4">EventsSpace</h1>
-          <p className="font-light text-sm text-slate-200">
+          <h1 className="mb-4 text-lg">EventsSpace</h1>
+          <p className="text-sm font-light text-slate-200">
             eventsSpace@gmail.com
           </p>
-          <p className="font-light text-sm my-1 text-slate-200">33912345678</p>
-          <p className="font-light text-sm text-slate-200">
+          <p className="my-1 text-sm font-light text-slate-200">33912345678</p>
+          <p className="text-sm font-light text-slate-200">
             Todos os direitos reservados
           </p>
         </div>
@@ -26,5 +26,5 @@ export default function Footer() {
         </div>
       </div>
     </div>
-  );
+  )
 }

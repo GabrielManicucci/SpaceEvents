@@ -1,10 +1,10 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react'
 
 interface Props {
-  children: ReactNode;
-  style?: string;
+  children: ReactNode
+  style?: string
 }
 
 export default function Section({ children, style }: Props) {
-  return <div className={style}>{children}</div>;
+  return <div className={style}>{children}</div>
 }

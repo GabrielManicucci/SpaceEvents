@@ -1,15 +1,13 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import HeadLine from "./components/home/Headline";
-import About from "./components/about/About";
-import Contact from "./components/contact/Contact";
+import About from './components/about/About'
+import Contact from './components/contact/Contact'
+import HeadLine from './components/home/Headline'
 
 export default function Home() {
   return (
-    <main className="flex flex-col justify-center w-full mt-32">
+    <main className="mt-32 flex w-full flex-col justify-center">
       <HeadLine />
       <About />
       <Contact />
     </main>
-  );
+  )
 }

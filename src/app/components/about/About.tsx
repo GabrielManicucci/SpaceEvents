@@ -1,23 +1,23 @@
-import Button from "@/components/Button";
-import Card from "@/components/Card";
-import Section from "@/components/Section";
-import Image from "next/image";
+import Button from '@/components/Button'
+import Card from '@/components/Card'
+import Section from '@/components/Section'
+import Image from 'next/image'
 
 export default function About() {
   return (
     <Section
-      style={"flex items-center flex-col justify-center p-2 mt-20 w-full"}
+      style={'flex items-center flex-col justify-center p-2 mt-20 w-full'}
     >
       <Card>
         <Image
-          src={"/workingPeoples2.png"}
+          src={'/workingPeoples2.png'}
           width={700}
           height={0}
           alt="imagem pessoas trabalhando"
-          className="rounded-t-xl md:w-[45%] bg-cover bg-no-repeat bg-center"
+          className="rounded-t-xl bg-cover bg-center bg-no-repeat md:w-[45%]"
         />
         <div className="flex flex-col justify-center p-9 md:w-[55%]">
-          <h2 className="text-2xl font-semibold text-indigo-950 my-3">
+          <h2 className="my-3 text-2xl font-semibold text-indigo-950">
             Sobre nós
           </h2>
           <p className="my-4">
@@ -30,7 +30,7 @@ export default function About() {
 
           <Button
             className={
-              "w-full bg-transparent transition-colors hover:border-0 hover:text-slate-50 hover:bg-gradient-to-r from-primaryBlue to-green-500 border border-indigo-950 p-3 mt-4 rounded-md"
+              'mt-4 w-full rounded-md border border-indigo-950 bg-transparent from-primaryBlue to-green-500 p-3 transition-colors hover:border-0 hover:bg-gradient-to-r hover:text-slate-50'
             }
           >
             Saiba mais
@@ -40,14 +40,16 @@ export default function About() {
 
       <Card>
         <Image
-          src={"/SpaceEventsImage3.png"}
+          src={'/SpaceEventsImage3.png'}
           width={700}
           height={0}
           alt="Imagem da área de lazer do SpaceEvents"
-          className="rounded-t-xl md:w-[45%] bg-cover bg-no-repeat bg-center"
+          className="rounded-t-xl bg-cover bg-center bg-no-repeat md:w-[45%]"
         />
         <div className="flex flex-col justify-center p-9 md:w-[55%]">
-          <h2 className="text-2xl font-semibold text-indigo-950 my-3">Espaço</h2>
+          <h2 className="my-3 text-2xl font-semibold text-indigo-950">
+            Espaço
+          </h2>
           <p className="my-4">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam
             error fuga pariatur ut? Impedit consectetur laudantium, eligendi
@@ -58,7 +60,7 @@ export default function About() {
 
           <Button
             className={
-              "w-full bg-transparent transition-colors hover:border-0 hover:text-slate-50 hover:bg-gradient-to-r from-primaryBlue to-green-500 border border-indigo-950 p-3 mt-4 rounded-md"
+              'mt-4 w-full rounded-md border border-indigo-950 bg-transparent from-primaryBlue to-green-500 p-3 transition-colors hover:border-0 hover:bg-gradient-to-r hover:text-slate-50'
             }
           >
             Saiba mais
@@ -68,14 +70,14 @@ export default function About() {
 
       <Card>
         <Image
-          src={"/SpaceEventsLocation.png"}
+          src={'/SpaceEventsLocation.png'}
           width={700}
           height={0}
           alt="imagem pessoas trabalhando"
-          className="rounded-t-xl md:w-[45%] bg-cover bg-no-repeat bg-center"
+          className="rounded-t-xl bg-cover bg-center bg-no-repeat md:w-[45%]"
         />
         <div className="flex flex-col justify-center p-9 md:w-[55%]">
-          <h2 className="text-2xl font-semibold text-indigo-950 my-3">
+          <h2 className="my-3 text-2xl font-semibold text-indigo-950">
             Localização
           </h2>
           <p className="my-4">
@@ -88,7 +90,7 @@ export default function About() {
 
           <Button
             className={
-              "w-full bg-transparent transition-colors hover:border-0 hover:text-slate-50 hover:bg-gradient-to-r from-primaryBlue to-green-500 border border-indigo-950 p-3 mt-4 rounded-md"
+              'mt-4 w-full rounded-md border border-indigo-950 bg-transparent from-primaryBlue to-green-500 p-3 transition-colors hover:border-0 hover:bg-gradient-to-r hover:text-slate-50'
             }
           >
             Saiba mais
@@ -96,5 +98,5 @@ export default function About() {
         </div>
       </Card>
     </Section>
-  );
+  )
 }

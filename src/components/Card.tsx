@@ -1,13 +1,13 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react'
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode
 }
 
 export default function Card({ children }: Props) {
   return (
-    <div className="flex flex-col mb-14 shadow-xl rounded-xl text-left md:flex-row w-full">
+    <div className="mb-14 flex w-full flex-col rounded-xl text-left shadow-xl md:flex-row">
       {children}
     </div>
-  );
+  )
 }

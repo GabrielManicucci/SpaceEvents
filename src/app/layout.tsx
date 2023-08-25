@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <div className="fixed z-10 w-[95%] xl:max-w-screen-2xl">
+        <div className="fixed z-20 w-[95%] xl:max-w-screen-2xl">
           <Navbar />
         </div>
         <div className="w-[95%] xl:max-w-7xl">{children}</div>

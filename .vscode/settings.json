@@ -1,7 +1,0 @@
-{
-  // configurações necessárias devido a eslint config importada da Rockeseat (nela usa-se o prettier como um plugin do eslint)
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-  },
-  "editor.formatOnSave": false
-}

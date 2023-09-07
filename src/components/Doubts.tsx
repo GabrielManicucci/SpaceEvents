@@ -55,7 +55,7 @@ export default function Doubts() {
     },
   ])
 
-  function handleClickQuestion(id: number, status: boolean) {
+  function handleClickQuestion(id: number) {
     const newDoubts = doubts.map((doubt) =>
       doubt.id === id
         ? { ...doubt, status: true }

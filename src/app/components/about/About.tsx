@@ -1,7 +1,7 @@
-import Button from '@/components/Button'
 import Card from '@/components/Card'
 import Section from '@/components/Section'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function About() {
   return (
@@ -28,13 +28,14 @@ export default function About() {
             facilis veniam eum consequuntur iusto libero!
           </p>
 
-          <Button
+          <Link
+            href={'/components/about'}
             className={
-              'mt-4 w-full rounded-md border border-indigo-950 bg-transparent from-primaryBlue to-green-500 p-4 transition-transform duration-200 hover:scale-95 hover:border-transparent hover:bg-gradient-to-r hover:text-slate-50'
+              'mt-4 w-full rounded-md border border-indigo-950 bg-transparent from-primaryBlue to-green-500 p-4 text-center transition-transform duration-200 hover:scale-95 hover:border-transparent hover:bg-gradient-to-r hover:text-slate-50'
             }
           >
             Saiba mais
-          </Button>
+          </Link>
         </div>
       </Card>
 
@@ -58,13 +59,14 @@ export default function About() {
             facilis veniam eum consequuntur iusto libero!
           </p>
 
-          <Button
+          <Link
+            href={'/components/about'}
             className={
-              'mt-4 w-full rounded-md border border-indigo-950 bg-transparent from-primaryBlue to-green-500 p-4 transition-transform duration-200 hover:scale-95 hover:border-transparent hover:bg-gradient-to-r hover:text-slate-50'
+              'mt-4 w-full rounded-md border border-indigo-950 bg-transparent from-primaryBlue to-green-500 p-4 text-center transition-transform duration-200 hover:scale-95 hover:border-transparent hover:bg-gradient-to-r hover:text-slate-50'
             }
           >
             Saiba mais
-          </Button>
+          </Link>
         </div>
       </Card>
 
@@ -88,13 +90,14 @@ export default function About() {
             facilis veniam eum consequuntur iusto libero!
           </p>
 
-          <Button
+          <Link
+            href={'/components/about'}
             className={
-              'mt-4 w-full rounded-md border border-indigo-950 bg-transparent from-primaryBlue to-green-500 p-4 transition-transform duration-200 hover:scale-95 hover:border-transparent hover:bg-gradient-to-r hover:text-slate-50'
+              'mt-4 w-full rounded-md border border-indigo-950 bg-transparent from-primaryBlue to-green-500 p-4 text-center transition-transform duration-200 hover:scale-95 hover:border-transparent hover:bg-gradient-to-r hover:text-slate-50'
             }
           >
             Saiba mais
-          </Button>
+          </Link>
         </div>
       </Card>
     </Section>

@@ -105,13 +105,13 @@ export default function Space() {
             <RiArrowRightSLine size={52} />
           </button>
 
-          <div className="no-scrollbar flex snap-x flex-row flex-nowrap gap-4 overflow-x-auto overflow-y-hidden sm:gap-8">
+          <div className="flex snap-x flex-row flex-nowrap gap-4 overflow-x-auto overflow-y-hidden sm:gap-8">
             {images.map((image, index) => (
               <div
                 className={
                   index === value
-                    ? 'flex min-h-[200px] min-w-[300px] flex-col sm:min-h-[400px] sm:min-w-[450px] xl:min-h-[450px] xl:min-w-[550px]'
-                    : 'flex min-h-[200px] min-w-[300px]  flex-col opacity-50 sm:min-h-[400px] sm:min-w-[450px] xl:min-h-[450px] xl:min-w-[550px]'
+                    ? 'flex min-h-[200px] min-w-[300px] snap-center flex-col sm:min-h-[400px] sm:min-w-[450px] xl:min-h-[450px] xl:min-w-[550px]'
+                    : 'flex min-h-[200px] min-w-[300px]  snap-center flex-col opacity-50 sm:min-h-[400px] sm:min-w-[450px] xl:min-h-[450px] xl:min-w-[550px]'
                 }
                 key={image.id}
                 ref={index === value ? selectedRef : null}

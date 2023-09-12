@@ -24,13 +24,13 @@ const Menu = ({ openDropdown, closeDropdown, closeMenu }: Props) => {
 
   return (
     <div className={menuOpenOrClosed()}>
-      <div className="lg:flex">
+      <div className="lg:flex lg:items-center">
         <Link
           href={'/'}
           className={
             closeDropdown
-              ? 'mt-2 hidden animate-opacityEffect cursor-pointer items-center rounded-lg border px-7 py-3 text-sm transition-all hover:bg-gray-100 hover:shadow-md lg:mt-0 lg:flex lg:border-none lg:px-3'
-              : 'mt-2 flex animate-opacityEffect cursor-pointer items-center rounded-lg border px-7 py-3 text-sm transition-all hover:bg-gray-100 hover:shadow-md lg:mt-0 lg:border-none lg:px-6'
+              ? 'lg:h-[90%] mt-2 hidden animate-opacityEffect cursor-pointer items-center rounded-lg border px-7 py-3 text-sm transition-all hover:bg-gray-100 hover:shadow-md lg:mt-0 lg:flex lg:border-none lg:px-3'
+              : 'lg:h-[90%] mt-2 flex animate-opacityEffect cursor-pointer items-center rounded-lg border px-7 py-3 text-sm transition-all hover:bg-gray-100 hover:shadow-md lg:mt-0 lg:border-none lg:px-6'
           }
           onClick={() => closeMenu()}
         >
@@ -40,8 +40,8 @@ const Menu = ({ openDropdown, closeDropdown, closeMenu }: Props) => {
           href={'/components/about'}
           className={
             closeDropdown
-              ? 'mt-2 hidden animate-opacityEffect cursor-pointer items-center rounded-lg border px-7 py-3 text-sm transition-all hover:bg-gray-100 hover:shadow-md lg:mt-0 lg:flex lg:border-none lg:px-3'
-              : 'mt-2 flex animate-opacityEffect cursor-pointer items-center rounded-lg border px-7 py-3 text-sm transition-all hover:bg-gray-100 hover:shadow-md lg:mt-0 lg:border-none lg:px-6'
+              ? 'lg:h-[90%] mt-2 hidden animate-opacityEffect cursor-pointer items-center rounded-lg border px-7 py-3 text-sm transition-all hover:bg-gray-100 hover:shadow-md lg:mt-0 lg:flex lg:border-none lg:px-3'
+              : 'lg:h-[90%] mt-2 flex animate-opacityEffect cursor-pointer items-center rounded-lg border px-7 py-3 text-sm transition-all hover:bg-gray-100 hover:shadow-md lg:mt-0 lg:border-none lg:px-6'
           }
           onClick={() => closeMenu()}
         >
@@ -51,8 +51,8 @@ const Menu = ({ openDropdown, closeDropdown, closeMenu }: Props) => {
           href={'/components/contact'}
           className={
             closeDropdown
-              ? 'mt-2 hidden animate-opacityEffect cursor-pointer items-center rounded-lg border px-7 py-4 text-sm transition-all hover:bg-gray-100 hover:shadow-md lg:mt-0 lg:flex lg:border-none lg:px-3'
-              : 'mt-2 flex animate-opacityEffect cursor-pointer items-center rounded-lg border px-7 py-3 text-sm transition-all hover:bg-gray-100 hover:shadow-md lg:mt-0 lg:border-none lg:px-6'
+              ? 'lg:h-[90%] mt-2 hidden animate-opacityEffect cursor-pointer items-center rounded-lg border px-7 py-4 text-sm transition-all hover:bg-gray-100 hover:shadow-md lg:mt-0 lg:flex lg:border-none lg:px-3'
+              : 'lg:h-[90%] mt-2 flex animate-opacityEffect cursor-pointer items-center rounded-lg border px-7 py-3 text-sm transition-all hover:bg-gray-100 hover:shadow-md lg:mt-0 lg:border-none lg:px-6'
           }
           onClick={() => closeMenu()}
         >
@@ -62,8 +62,8 @@ const Menu = ({ openDropdown, closeDropdown, closeMenu }: Props) => {
           href={'/components/space'}
           className={
             closeDropdown
-              ? 'mt-2 hidden animate-opacityEffect cursor-pointer items-center rounded-lg border px-7 py-4 text-sm transition-all hover:bg-gray-100 hover:shadow-md lg:mt-0 lg:flex lg:border-none lg:px-3'
-              : 'mt-2 flex animate-opacityEffect cursor-pointer items-center rounded-lg border px-7 py-3 text-sm transition-all hover:bg-gray-100 hover:shadow-md lg:mt-0 lg:border-none lg:px-6'
+              ? 'lg:h-[90%] mt-2 hidden animate-opacityEffect cursor-pointer items-center rounded-lg border px-7 py-4 text-sm transition-all hover:bg-gray-100 hover:shadow-md lg:mt-0 lg:flex lg:border-none lg:px-3'
+              : 'lg:h-[90%] mt-2 flex animate-opacityEffect cursor-pointer items-center rounded-lg border px-7 py-3 text-sm transition-all hover:bg-gray-100 hover:shadow-md lg:mt-0 lg:border-none lg:px-6'
           }
           onClick={() => closeMenu()}
         >

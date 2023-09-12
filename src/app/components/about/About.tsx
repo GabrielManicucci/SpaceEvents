@@ -30,7 +30,7 @@ export default function About() {
 
           <Button
             className={
-              'mt-4 w-full rounded-md border border-indigo-950 bg-transparent from-primaryBlue to-green-500 p-3 transition-colors hover:border-0 hover:bg-gradient-to-r hover:text-slate-50'
+              'mt-4 w-full rounded-md border border-indigo-950 bg-transparent from-primaryBlue to-green-500 p-4 transition-transform duration-200 hover:scale-95 hover:border-transparent hover:bg-gradient-to-r hover:text-slate-50'
             }
           >
             Saiba mais
@@ -60,7 +60,7 @@ export default function About() {
 
           <Button
             className={
-              'mt-4 w-full rounded-md border border-indigo-950 bg-transparent from-primaryBlue to-green-500 p-3 transition-colors hover:border-0 hover:bg-gradient-to-r hover:text-slate-50'
+              'mt-4 w-full rounded-md border border-indigo-950 bg-transparent from-primaryBlue to-green-500 p-4 transition-transform duration-200 hover:scale-95 hover:border-transparent hover:bg-gradient-to-r hover:text-slate-50'
             }
           >
             Saiba mais
@@ -90,7 +90,7 @@ export default function About() {
 
           <Button
             className={
-              'mt-4 w-full rounded-md border border-indigo-950 bg-transparent from-primaryBlue to-green-500 p-3 transition-colors hover:border-0 hover:bg-gradient-to-r hover:text-slate-50'
+              'mt-4 w-full rounded-md border border-indigo-950 bg-transparent from-primaryBlue to-green-500 p-4 transition-transform duration-200 hover:scale-95 hover:border-transparent hover:bg-gradient-to-r hover:text-slate-50'
             }
           >
             Saiba mais

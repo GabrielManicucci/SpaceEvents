@@ -50,10 +50,6 @@ const Menu = ({ openDropdown, closeDropdown, closeMenu }: Props) => {
     <div className={menuOpenOrClosed()}>
       <div className="lg:flex lg:items-center">
         {navLinks.map((link, index) => {
-          // const isActive = pathname === link.href
-
-          console.log(pathname)
-
           return (
             <Link
               href={link.href}
@@ -70,40 +66,6 @@ const Menu = ({ openDropdown, closeDropdown, closeMenu }: Props) => {
             </Link>
           )
         })}
-
-        {/* <Link
-          href={'/'}
-          className={
-            closeDropdown
-              ? 'mt-2 hidden animate-opacityEffect cursor-pointer items-center rounded-lg border px-7 py-3 text-sm transition-all hover:bg-gray-100 hover:shadow-md lg:mt-0 lg:flex lg:h-[90%] lg:border-none lg:px-3'
-              : 'mt-2 flex animate-opacityEffect cursor-pointer items-center rounded-lg border px-7 py-3 text-sm transition-all hover:bg-gray-100 hover:shadow-md lg:mt-0 lg:h-[90%] lg:border-none lg:px-6'
-          }
-          onClick={() => closeMenu()}
-        >
-          Início
-        </Link>
-        <Link
-          href={'/components/about'}
-          className={
-            closeDropdown
-              ? 'mt-2 hidden animate-opacityEffect cursor-pointer items-center rounded-lg border px-7 py-3 text-sm transition-all hover:bg-gray-100 hover:shadow-md lg:mt-0 lg:flex lg:h-[90%] lg:border-none lg:px-3'
-              : 'mt-2 flex animate-opacityEffect cursor-pointer items-center rounded-lg border px-7 py-3 text-sm transition-all hover:bg-gray-100 hover:shadow-md lg:mt-0 lg:h-[90%] lg:border-none lg:px-6'
-          }
-          onClick={() => closeMenu()}
-        >
-          Sobre
-        </Link>
-        <Link
-          href={'/components/contact'}
-          className={
-            closeDropdown
-              ? 'mt-2 hidden animate-opacityEffect cursor-pointer items-center rounded-lg border px-7 py-4 text-sm transition-all hover:bg-gray-100 hover:shadow-md lg:mt-0 lg:flex lg:h-[90%] lg:border-none lg:px-3'
-              : 'mt-2 flex animate-opacityEffect cursor-pointer items-center rounded-lg border px-7 py-3 text-sm transition-all hover:bg-gray-100 hover:shadow-md lg:mt-0 lg:h-[90%] lg:border-none lg:px-6'
-          }
-          onClick={() => closeMenu()}
-        >
-          Contato
-        </Link> */}
       </div>
 
       <Link

@@ -34,10 +34,10 @@ const Menu = ({ openDropdown, closeDropdown, closeMenu }: Props) => {
 
   function menuOpenOrClosed() {
     if (openDropdown) {
-      console.log(openDropdown, closeDropdown)
+      // console.log(openDropdown, closeDropdown)
       return 'animate-menuOpenDropdown relative flex flex-col text-left w-full h-[284px] mt-4 lg:flex lg:flex-row lg:w-[64%] lg:h-full lg:mt-0 justify-between'
     } else if (closeDropdown) {
-      console.log(openDropdown, closeDropdown)
+      // console.log(openDropdown, closeDropdown)
       return 'animate-menuCloseDropdown relative flex flex-col text-left w-full h-0 mt-0 lg:flex lg:flex-row lg:w-[64%] lg:h-full justify-between'
     } else {
       return 'hidden lg:flex flex-row lg:w-[64%] justify-between'

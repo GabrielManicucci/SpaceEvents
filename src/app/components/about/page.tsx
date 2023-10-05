@@ -7,7 +7,7 @@ export default function Space() {
       <Section
         style={'flex flex-col justify-center p-2 mt-10 xl:gap-x-20 lg:mt-20'}
       >
-        <div className="mb-24 flex flex-col items-center">
+        <div className="mb-14 flex flex-col items-center">
           <h1 className="mb-1 text-center text-3xl font-semibold text-indigo-950">
             Sobre Nós
           </h1>

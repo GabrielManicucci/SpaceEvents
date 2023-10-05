@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 
 import Section from '@/components/Section'
@@ -15,14 +14,25 @@ import * as z from 'zod'
 // }
 
 const schema = z.object({
-  name: z.string().nonempty({ message: 'must be 1 or more characters long' }),
-  email: z.string().email({ message: 'Invalid email address' }),
-  number: z
+  name: z
     .string()
-    .length(11, {
-      message: 'must be contain DDD and cannot contain empty spaces',
-    }),
-  textarea: z.string().nonempty({ message: 'This field cannot be empty' }),
+    .nonempty({ message: 'O nome é obrigatório' })
+    .toLowerCase()
+    .transform((name) =>
+      name
+        .trim()
+        .split(' ')
+        .map((word) => word[0].toLocaleUpperCase().concat(word.substring(1)))
+        .join(' '),
+    ),
+  email: z
+    .string()
+    .nonempty({ message: 'Email é obrigatório' })
+    .email({ message: 'Endereço de email inválido' }),
+  number: z.string().nonempty({ message: 'Número é obrigatório' }).length(11, {
+    message: 'deve conter DDD e sem espaços',
+  }),
+  textarea: z.string().nonempty({ message: 'Mensagem de texto obrigatória' }),
 })
 
 type userSchema = z.infer<typeof schema>
@@ -37,7 +47,7 @@ export default function Space() {
     resolver: zodResolver(schema),
   })
 
-  const sendMensage = (data: any) => {
+  function sendMensage(data: object) {
     setValue(JSON.stringify(data))
   }
 
@@ -63,84 +73,95 @@ export default function Space() {
 
           <form
             action=""
-            className="flex w-full flex-col px-5 pb-10 pt-10 md:flex-row md:justify-around xl:justify-center"
+            className="flex w-full flex-col px-5 pb-8 pt-7 md:flex-row md:justify-around xl:justify-center"
             onSubmit={handleSubmit(sendMensage)}
           >
-            <div className="flex flex-[0_1_45%] flex-col xl:mr-5">
-              <label htmlFor="name" className="text-sm">
-                Nome
-              </label>
-              <input
-                type="text"
-                {...register('name')}
-                name="name"
-                id="name"
-                placeholder="Nome"
-                className="mb-2 rounded-md border-b border-indigo-950 bg-transparent p-3"
-              />
-              {errors.name && (
-                <span className="mb-7 text-red-600">{errors.name.message}</span>
-              )}
-              <label htmlFor="email" className="text-sm">
-                Email
-              </label>
-              <input
-                type="email"
-                {...register('email')}
-                name="email"
-                id="email"
-                placeholder="Email"
-                className="mb-2 rounded-md border-b border-indigo-950 bg-transparent p-3"
-              />
-              {errors.email && (
-                <span className="mb-7 text-red-600">
-                  {errors.email.message}
-                </span>
-              )}
+            <div className="flex flex-[0_1_45%] flex-col justify-between  xl:mr-5 ">
+              <div className="mb-2 flex w-full flex-col">
+                <label htmlFor="name" className="text-sm">
+                  Nome
+                </label>
+                <input
+                  type="text"
+                  {...register('name')}
+                  name="name"
+                  id="name"
+                  placeholder="Nome"
+                  className="mb-1 rounded-md border-b border-indigo-950 bg-transparent p-3"
+                />
+                {errors.name && (
+                  <span className="text-sm text-red-600">
+                    {errors.name.message}
+                  </span>
+                )}
+              </div>
 
-              <label htmlFor="number" className="text-sm">
-                Número
-              </label>
-              <input
-                type="text"
-                {...register('number')}
-                name="number"
-                id="number"
-                placeholder="Número"
-                className="mb-2 rounded-md border-b border-indigo-950 bg-transparent p-3 md:mb-0"
-              />
-              {errors.number && (
-                <span className="mb-7 text-red-600">
-                  {errors.number.message}
-                </span>
-              )}
+              <div className="mb-2 flex w-full flex-col">
+                <label htmlFor="email" className="text-sm">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  {...register('email')}
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                  className="mb-1 rounded-md border-b border-indigo-950 bg-transparent p-3"
+                />
+                {errors.email && (
+                  <span className="text-sm text-red-600">
+                    {errors.email.message}
+                  </span>
+                )}
+              </div>
+
+              <div className="mb-2 flex w-full flex-col md:mb-0">
+                <label htmlFor="number" className="text-sm">
+                  Número
+                </label>
+                <input
+                  type="text"
+                  {...register('number')}
+                  name="number"
+                  id="number"
+                  placeholder="Número"
+                  className=" rounded-md border-b border-indigo-950 bg-transparent p-3 md:mb-0"
+                />
+                {errors.number && (
+                  <span className="mt-1 text-sm text-red-600">
+                    {errors.number.message}
+                  </span>
+                )}
+              </div>
             </div>
 
-            <div className="flex flex-[0_1_45%] flex-col xl:ml-5">
-              <label htmlFor="textarea" className="text-sm">
-                Mensagem
-              </label>
+            <div className="flex flex-[0_1_45%] flex-col justify-between xl:ml-5">
+              <div className="mb-3 flex flex-col">
+                <label htmlFor="textarea" className="text-sm">
+                  Mensagem
+                </label>
 
-              <textarea
-                // name="textarea"
-                id="textarea"
-                cols={0}
-                rows={0}
-                placeholder="Mensagem"
-                className="mb-2 h-48
+                <textarea
+                  // name="textarea"
+                  id="textarea"
+                  cols={0}
+                  rows={0}
+                  placeholder="Mensagem"
+                  className="mb-1 h-40
                  resize-none rounded-md border-b border-indigo-950 bg-transparent p-3"
-                {...register('textarea')}
-              ></textarea>
-              {errors.textarea && (
-                <span className="mb-7 text-red-600">
-                  {errors.textarea.message}
-                </span>
-              )}
+                  {...register('textarea')}
+                ></textarea>
+                {errors.textarea && (
+                  <span className="text-sm text-red-600">
+                    {errors.textarea.message}
+                  </span>
+                )}
+              </div>
 
               <input
                 type="submit"
                 value="Enviar"
-                className="rounded-lg bg-green-700 from-green-700 to-hoverGreen p-3 text-slate-50 duration-200 hover:scale-95 hover:bg-gradient-to-r"
+                className="rounded-lg bg-green-700 from-green-700 to-hoverGreen p-4 text-slate-50 duration-200 hover:scale-95 hover:bg-gradient-to-r"
               />
             </div>
           </form>

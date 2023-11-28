@@ -1,20 +1,14 @@
 'use client'
 
 import Section from '@/components/Section'
-import { useState } from 'react'
+import { useLayoutEffect, useRef, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { gsap } from 'gsap'
 import * as z from 'zod'
 
-// type Inputs = {
-//   name: string
-//   email: string
-//   number: string
-//   textarea: string
-// }
-
 const schema = z.object({
-  name: z
+  user: z
     .string()
     .nonempty({ message: 'O nome é obrigatório' })
     .toLowerCase()
@@ -38,7 +32,28 @@ const schema = z.object({
 type userSchema = z.infer<typeof schema>
 
 export default function Space() {
-  const [value, setValue] = useState('')
+  const [response, setResponse] = useState('')
+  const [information, setInformation] = useState('')
+
+  const responseContainerRef = useRef<HTMLDivElement | null>(null)
+  const informationContainerRef = useRef<HTMLDivElement | null>(null)
+
+  useLayoutEffect(() => {
+    gsap.fromTo(
+      responseContainerRef.current,
+      { opacity: 1 },
+      { opacity: 0, duration: 4, ease: 'sine.in' },
+    )
+  }, [response])
+
+  useLayoutEffect(() => {
+    gsap.fromTo(
+      informationContainerRef.current,
+      { opacity: 1 },
+      { opacity: 0, duration: 3, ease: 'sine.in' },
+    )
+  }, [information])
+
   const {
     register,
     handleSubmit,
@@ -47,8 +62,29 @@ export default function Space() {
     resolver: zodResolver(schema),
   })
 
-  function sendMensage(data: object) {
-    setValue(JSON.stringify(data))
+  async function sendToEmail(data: object) {
+    setInformation('true')
+
+    const res = await fetch('http://localhost:3333/sendEmail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+    const returnedData = await res.json()
+    // console.log(JSON.stringify(returnedData))
+    if (returnedData.message === 'email sent with sucessfull') {
+      setResponse('true')
+    } else {
+      setResponse('false')
+    }
+
+    setTimeout(() => {
+      setInformation('')
+      setResponse('')
+      console.log('interval ok')
+    }, 4000)
   }
 
   return (
@@ -56,6 +92,37 @@ export default function Space() {
       <Section
         style={'flex flex-col justify-center items-center p-2 mt-10 lg:mt-20'}
       >
+        {information === 'true' ? (
+          <div
+            className="absolute top-[105px] z-50 w-80 rounded-xl bg-gray-500 p-3 text-sm text-slate-50 shadow-lg lg:top-[120px] lg:p-4"
+            ref={informationContainerRef}
+          >
+            Email será enviado, aguarde para confirmação na tela
+          </div>
+        ) : (
+          ''
+        )}
+        {response === 'true' ? (
+          <div
+            className="absolute top-[105px] z-50 w-80 rounded-xl bg-gray-500 p-3 text-sm text-green-300 shadow-lg lg:top-[120px] lg:p-4"
+            ref={responseContainerRef}
+          >
+            Email enviado, retornaremos o mais rápido possível
+          </div>
+        ) : (
+          ''
+        )}
+        {response === 'false' ? (
+          <div
+            className="absolute top-[115px] z-50 w-80 rounded-xl bg-gray-500 p-4 text-sm text-red-400 shadow-lg lg:top-[120px] lg:p-5"
+            ref={responseContainerRef}
+          >
+            Email não enviado, contate a empresa
+          </div>
+        ) : (
+          ''
+        )}
+
         <div className="mb-14 flex w-full flex-col items-center lg:mb-20">
           <h1 className="mb-1 text-center text-3xl font-semibold text-indigo-950">
             Contate-nos
@@ -74,7 +141,7 @@ export default function Space() {
           <form
             action=""
             className="flex w-full flex-col px-5 pb-8 pt-7 md:flex-row md:justify-around xl:justify-center"
-            onSubmit={handleSubmit(sendMensage)}
+            onSubmit={handleSubmit(sendToEmail)}
           >
             <div className="flex flex-[0_1_45%] flex-col justify-between  xl:mr-5 ">
               <div className="mb-2 flex w-full flex-col">
@@ -83,15 +150,15 @@ export default function Space() {
                 </label>
                 <input
                   type="text"
-                  {...register('name')}
-                  name="name"
+                  {...register('user')}
+                  name="user"
                   id="name"
                   placeholder="Nome"
                   className="mb-1 rounded-md border-b border-indigo-950 bg-transparent p-3"
                 />
-                {errors.name && (
+                {errors.user && (
                   <span className="text-sm text-red-600">
-                    {errors.name.message}
+                    {errors.user.message}
                   </span>
                 )}
               </div>
@@ -166,7 +233,6 @@ export default function Space() {
             </div>
           </form>
         </div>
-        <div className="mt-10 flex flex-col">{value}</div>
       </Section>
     </main>
   )

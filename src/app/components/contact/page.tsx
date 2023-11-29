@@ -7,6 +7,10 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { gsap } from 'gsap'
 import * as z from 'zod'
 
+gsap.config({
+  nullTargetWarn: false,
+})
+
 const schema = z.object({
   user: z
     .string()
@@ -65,13 +69,16 @@ export default function Space() {
   async function sendToEmail(data: object) {
     setInformation('true')
 
-    const res = await fetch('http://localhost:3333/sendEmail', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
+    const res = await fetch(
+      'https://backend-spaceevents.onrender.com/sendEmail',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
       },
-      body: JSON.stringify(data),
-    })
+    )
     const returnedData = await res.json()
     // console.log(JSON.stringify(returnedData))
     if (returnedData.message === 'email sent with sucessfull') {

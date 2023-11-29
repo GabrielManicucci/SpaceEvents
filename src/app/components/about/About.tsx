@@ -6,7 +6,9 @@ import Link from 'next/link'
 export default function About() {
   return (
     <Section
-      style={'flex items-center flex-col justify-center p-2 mt-20 w-full'}
+      style={
+        'flex items-center flex-col justify-center p-2 mt-24 lg:mt-28 w-full'
+      }
     >
       <Card>
         <Image

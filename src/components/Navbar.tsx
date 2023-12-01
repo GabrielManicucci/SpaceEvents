@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import Menu from './menu'
+import Link from 'next/link'
 
 export default function Navbar() {
   const [openDropdown, setOpenDropdown] = useState(false)
@@ -19,7 +20,9 @@ export default function Navbar() {
   return (
     <div className="bac absolute mt-2 flex w-full flex-col items-center justify-between rounded-md bg-white px-5 py-7 transition-transform lg:flex-row">
       <div className="flex w-full flex-row items-center justify-between lg:w-[36%]">
-        <h1 className="text-xl font-semibold text-green-700">EventsSpace</h1>
+        <Link href={'/'}>
+          <h1 className="text-xl font-semibold text-green-700">EventsSpace</h1>
+        </Link>
 
         <div className="lg:hidden">
           <RxHamburgerMenu
